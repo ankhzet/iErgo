@@ -20,7 +20,29 @@
 }
 
 - (AEManageable *) newManageable {
-	return nil;
+	NSNumber *maxID = @0;
+	
+	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+	NSEntityDescription *fetchEntity = [NSEntityDescription entityForName:[AEManageable entityName]
+																						inManagedObjectContext:self.managedObjectContext];
+	[fetchRequest setEntity:fetchEntity];
+	
+	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"uid"
+																																 ascending:YES];
+	NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
+	[fetchRequest setSortDescriptors:sortDescriptors];
+	[fetchRequest setFetchLimit:1];
+	
+	NSError *error = nil;
+	NSArray *fetchedObjects = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+	if ([fetchedObjects count]) {
+    maxID = [fetchedObjects[0] uid];
+	}
+
+	AEManageable *entity = [NSEntityDescription insertNewObjectForEntityForName:[AEManageable entityName] inManagedObjectContext:self.managedObjectContext];
+	
+	[entity setUid:@([maxID integerValue] + 1)];
+	return entity;
 }
 
 @end

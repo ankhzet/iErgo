@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="12F45" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Manageable" representedClassName="Manageable" syncable="YES">
+    <entity name="Manageable" representedClassName="AEManageable" syncable="YES">
         <attribute name="uid" optional="YES" attributeType="Integer 32" defaultValueString="0.0" syncable="YES"/>
         <relationship name="titles" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ManageableTitle" inverseName="manageable" inverseEntity="ManageableTitle" syncable="YES"/>
     </entity>
-    <entity name="ManageableTitle" representedClassName="Title" syncable="YES">
+    <entity name="ManageableTitle" representedClassName="AEManageableTitle" syncable="YES">
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="manageable" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Manageable" inverseName="titles" inverseEntity="Manageable" syncable="YES"/>
     </entity>

@@ -7,11 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
+#import "Manageable.h"
 
+#import "NSManagedObject+Commons.h"
 
-@interface AEManageable : NSManagedObject
+@interface AEManageable : Manageable
 
-@property (nonatomic, retain) NSNumber * uid;
+- (BOOL) addTitle:(NSString *) title;
+- (BOOL) removeTitle:(NSString *) title;
+
+- (NSMutableSet *) mutableTitles;
 
 @end

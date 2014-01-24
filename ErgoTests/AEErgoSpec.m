@@ -7,7 +7,7 @@ SPEC_BEGIN(AEErgoSpec)
 
 describe(@"Testing Ergo", ^{
 	context(@"singleton", ^{
-
+		
 		__block AEErgo *ergo;
 		__block AEManageable *entity;
 		
@@ -23,13 +23,8 @@ describe(@"Testing Ergo", ^{
 		});
 		
 		it(@"should create new manageable entities on request", ^{
-			entity = [ergo newManageable];
-			
 			// new entity should be returned
-			[entity shouldNotBeNil];
-			
-			// make sure, uid assigned
-			[[theValue([entity uid]) shouldNot] equal:theValue(0)];
+			[(entity = [ergo newManageable]) shouldNotBeNil];
 		});
 		
 	});

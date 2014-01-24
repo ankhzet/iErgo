@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AEDataManager.h"
 #import "AEManageable.h"
 
-@interface AEErgo : NSObject
+@interface AEErgo : AEDataManager
 
 + (AEErgo *) getInstance;
 - (AEManageable *) newManageable;

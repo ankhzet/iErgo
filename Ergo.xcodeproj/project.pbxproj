@@ -7,7 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A12F56A1892C08000B701AD /* AEManageable.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A12F5691892C08000B701AD /* AEManageable.m */; };
+		0A12F56D1892C7E700B701AD /* AEDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A12F56C1892C7E700B701AD /* AEDataManager.m */; };
+		0A12F56F1892C89700B701AD /* AEDataManagerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A12F56E1892C89700B701AD /* AEDataManagerSpec.m */; };
+		0A12F5821892D34600B701AD /* AEManageable.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A12F5811892D34600B701AD /* AEManageable.m */; };
+		0A12F5881892D37D00B701AD /* Manageable.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A12F5871892D37D00B701AD /* Manageable.m */; };
+		0A12F58F1892D61F00B701AD /* NSManagedObject+Commons.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A12F58E1892D61F00B701AD /* NSManagedObject+Commons.m */; };
+		0A9F59601892D86700DBD54D /* AEManageableTitleSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9F595F1892D86700DBD54D /* AEManageableTitleSpec.m */; };
+		0A9F59621892DC8B00DBD54D /* AEManageableSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9F59611892DC8B00DBD54D /* AEManageableSpec.m */; };
+		0A9F59691892E77F00DBD54D /* ManageableTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9F59681892E77F00DBD54D /* ManageableTitle.m */; };
+		0A9F596C1892E7A200DBD54D /* AEManageableTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9F596B1892E7A200DBD54D /* AEManageableTitle.m */; };
 		0AA987501892B09D000AC3A6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA9874F1892B09D000AC3A6 /* Cocoa.framework */; };
 		0AA9875A1892B09E000AC3A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AA987581892B09E000AC3A6 /* InfoPlist.strings */; };
 		0AA9875C1892B09E000AC3A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA9875B1892B09E000AC3A6 /* main.m */; };
@@ -35,8 +43,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A12F5681892C08000B701AD /* AEManageable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEManageable.h; sourceTree = "<group>"; };
-		0A12F5691892C08000B701AD /* AEManageable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEManageable.m; sourceTree = "<group>"; };
+		0A12F56B1892C7E700B701AD /* AEDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEDataManager.h; sourceTree = "<group>"; };
+		0A12F56C1892C7E700B701AD /* AEDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEDataManager.m; sourceTree = "<group>"; };
+		0A12F56E1892C89700B701AD /* AEDataManagerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEDataManagerSpec.m; sourceTree = "<group>"; };
+		0A12F5801892D34600B701AD /* AEManageable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEManageable.h; sourceTree = "<group>"; };
+		0A12F5811892D34600B701AD /* AEManageable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEManageable.m; sourceTree = "<group>"; };
+		0A12F5861892D37D00B701AD /* Manageable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Manageable.h; sourceTree = "<group>"; };
+		0A12F5871892D37D00B701AD /* Manageable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Manageable.m; sourceTree = "<group>"; };
+		0A12F58D1892D61F00B701AD /* NSManagedObject+Commons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+Commons.h"; sourceTree = "<group>"; };
+		0A12F58E1892D61F00B701AD /* NSManagedObject+Commons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+Commons.m"; sourceTree = "<group>"; };
+		0A9F595F1892D86700DBD54D /* AEManageableTitleSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEManageableTitleSpec.m; sourceTree = "<group>"; };
+		0A9F59611892DC8B00DBD54D /* AEManageableSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEManageableSpec.m; sourceTree = "<group>"; };
+		0A9F59631892E07E00DBD54D /* Ergo 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ergo 2.xcdatamodel"; sourceTree = "<group>"; };
+		0A9F59671892E77F00DBD54D /* ManageableTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageableTitle.h; sourceTree = "<group>"; };
+		0A9F59681892E77F00DBD54D /* ManageableTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageableTitle.m; sourceTree = "<group>"; };
+		0A9F596A1892E7A200DBD54D /* AEManageableTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEManageableTitle.h; sourceTree = "<group>"; };
+		0A9F596B1892E7A200DBD54D /* AEManageableTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEManageableTitle.m; sourceTree = "<group>"; };
 		0AA9874C1892B09D000AC3A6 /* Ergo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ergo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AA9874F1892B09D000AC3A6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		0AA987521892B09E000AC3A6 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -85,6 +107,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A12F5701892CD4700B701AD /* Data managing */ = {
+			isa = PBXGroup;
+			children = (
+				0A12F58D1892D61F00B701AD /* NSManagedObject+Commons.h */,
+				0A12F58E1892D61F00B701AD /* NSManagedObject+Commons.m */,
+				0AA987671892B09E000AC3A6 /* Ergo.xcdatamodeld */,
+				0A9F59671892E77F00DBD54D /* ManageableTitle.h */,
+				0A9F59681892E77F00DBD54D /* ManageableTitle.m */,
+				0A12F5861892D37D00B701AD /* Manageable.h */,
+				0A12F5871892D37D00B701AD /* Manageable.m */,
+			);
+			name = "Data managing";
+			sourceTree = "<group>";
+		};
 		0AA987431892B09C000AC3A6 = {
 			isa = PBXGroup;
 			children = (
@@ -132,9 +168,9 @@
 				0AA987611892B09E000AC3A6 /* AEAppDelegate.h */,
 				0AA987621892B09E000AC3A6 /* AEAppDelegate.m */,
 				0AA9878D1892B642000AC3A6 /* Main manager */,
+				0A12F5701892CD4700B701AD /* Data managing */,
 				0AA987641892B09E000AC3A6 /* MainMenu.xib */,
 				0AA9876A1892B09E000AC3A6 /* Images.xcassets */,
-				0AA987671892B09E000AC3A6 /* Ergo.xcdatamodeld */,
 				0AA987561892B09E000AC3A6 /* Supporting Files */,
 			);
 			path = Ergo;
@@ -155,6 +191,9 @@
 		0AA987761892B09E000AC3A6 /* ErgoTests */ = {
 			isa = PBXGroup;
 			children = (
+				0A12F56E1892C89700B701AD /* AEDataManagerSpec.m */,
+				0A9F595F1892D86700DBD54D /* AEManageableTitleSpec.m */,
+				0A9F59611892DC8B00DBD54D /* AEManageableSpec.m */,
 				0AA987881892B2C1000AC3A6 /* AEErgoSpec.m */,
 				0AA987771892B09E000AC3A6 /* Supporting Files */,
 			);
@@ -175,8 +214,12 @@
 			children = (
 				0AA9878A1892B63D000AC3A6 /* AEErgo.h */,
 				0AA9878B1892B63D000AC3A6 /* AEErgo.m */,
-				0A12F5681892C08000B701AD /* AEManageable.h */,
-				0A12F5691892C08000B701AD /* AEManageable.m */,
+				0A12F56B1892C7E700B701AD /* AEDataManager.h */,
+				0A12F56C1892C7E700B701AD /* AEDataManager.m */,
+				0A12F5801892D34600B701AD /* AEManageable.h */,
+				0A12F5811892D34600B701AD /* AEManageable.m */,
+				0A9F596A1892E7A200DBD54D /* AEManageableTitle.h */,
+				0A9F596B1892E7A200DBD54D /* AEManageableTitle.m */,
 			);
 			name = "Main manager";
 			sourceTree = "<group>";
@@ -315,11 +358,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A12F58F1892D61F00B701AD /* NSManagedObject+Commons.m in Sources */,
 				0AA987691892B09E000AC3A6 /* Ergo.xcdatamodeld in Sources */,
+				0A9F59691892E77F00DBD54D /* ManageableTitle.m in Sources */,
+				0A12F56D1892C7E700B701AD /* AEDataManager.m in Sources */,
 				0AA987631892B09E000AC3A6 /* AEAppDelegate.m in Sources */,
-				0A12F56A1892C08000B701AD /* AEManageable.m in Sources */,
+				0A12F5881892D37D00B701AD /* Manageable.m in Sources */,
 				0AA9878C1892B63D000AC3A6 /* AEErgo.m in Sources */,
+				0A9F596C1892E7A200DBD54D /* AEManageableTitle.m in Sources */,
 				0AA9875C1892B09E000AC3A6 /* main.m in Sources */,
+				0A12F5821892D34600B701AD /* AEManageable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,7 +375,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A12F56F1892C89700B701AD /* AEDataManagerSpec.m in Sources */,
+				0A9F59601892D86700DBD54D /* AEManageableTitleSpec.m in Sources */,
 				0AA987891892B2C1000AC3A6 /* AEErgoSpec.m in Sources */,
+				0A9F59621892DC8B00DBD54D /* AEManageableSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,9 +600,10 @@
 		0AA987671892B09E000AC3A6 /* Ergo.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				0A9F59631892E07E00DBD54D /* Ergo 2.xcdatamodel */,
 				0AA987681892B09E000AC3A6 /* Ergo.xcdatamodel */,
 			);
-			currentVersion = 0AA987681892B09E000AC3A6 /* Ergo.xcdatamodel */;
+			currentVersion = 0A9F59631892E07E00DBD54D /* Ergo 2.xcdatamodel */;
 			path = Ergo.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
