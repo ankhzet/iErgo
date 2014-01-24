@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A12F56A1892C08000B701AD /* AEManageable.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A12F5691892C08000B701AD /* AEManageable.m */; };
 		0AA987501892B09D000AC3A6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA9874F1892B09D000AC3A6 /* Cocoa.framework */; };
 		0AA9875A1892B09E000AC3A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AA987581892B09E000AC3A6 /* InfoPlist.strings */; };
 		0AA9875C1892B09E000AC3A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA9875B1892B09E000AC3A6 /* main.m */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A12F5681892C08000B701AD /* AEManageable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEManageable.h; sourceTree = "<group>"; };
+		0A12F5691892C08000B701AD /* AEManageable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEManageable.m; sourceTree = "<group>"; };
 		0AA9874C1892B09D000AC3A6 /* Ergo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ergo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AA9874F1892B09D000AC3A6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		0AA987521892B09E000AC3A6 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -172,6 +175,8 @@
 			children = (
 				0AA9878A1892B63D000AC3A6 /* AEErgo.h */,
 				0AA9878B1892B63D000AC3A6 /* AEErgo.m */,
+				0A12F5681892C08000B701AD /* AEManageable.h */,
+				0A12F5691892C08000B701AD /* AEManageable.m */,
 			);
 			name = "Main manager";
 			sourceTree = "<group>";
@@ -312,6 +317,7 @@
 			files = (
 				0AA987691892B09E000AC3A6 /* Ergo.xcdatamodeld in Sources */,
 				0AA987631892B09E000AC3A6 /* AEAppDelegate.m in Sources */,
+				0A12F56A1892C08000B701AD /* AEManageable.m in Sources */,
 				0AA9878C1892B63D000AC3A6 /* AEErgo.m in Sources */,
 				0AA9875C1892B09E000AC3A6 /* main.m in Sources */,
 			);

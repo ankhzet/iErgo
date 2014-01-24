@@ -1,5 +1,5 @@
 //
-//  AEErgo.h
+//  AEManageable.h
 //  Ergo
 //
 //  Created by Ankh on 24.01.14.
@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AEManageable.h"
+#import <CoreData/CoreData.h>
 
-@interface AEErgo : NSObject
 
-+ (AEErgo *) getInstance;
-- (AEManageable *) newManageable;
+@interface AEManageable : NSManagedObject
+
+@property (nonatomic, retain) NSNumber * uid;
 
 @end

@@ -19,4 +19,8 @@
 	return instance;
 }
 
+- (AEManageable *) newManageable {
+	return nil;
+}
+
 @end
