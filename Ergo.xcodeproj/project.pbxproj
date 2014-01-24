@@ -18,6 +18,8 @@
 		0AA987721892B09E000AC3A6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA987711892B09E000AC3A6 /* XCTest.framework */; };
 		0AA987731892B09E000AC3A6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA9874F1892B09D000AC3A6 /* Cocoa.framework */; };
 		0AA9877B1892B09E000AC3A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AA987791892B09E000AC3A6 /* InfoPlist.strings */; };
+		0AA987891892B2C1000AC3A6 /* AEErgoSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA987881892B2C1000AC3A6 /* AEErgoSpec.m */; };
+		0AA9878C1892B63D000AC3A6 /* AEErgo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA9878B1892B63D000AC3A6 /* AEErgo.m */; };
 		9336A16A9FE340E9A729D77C /* libPods-ErgoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AEB0E5570F34C49BA575A39 /* libPods-ErgoTests.a */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,9 @@
 		0AA987711892B09E000AC3A6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		0AA987781892B09E000AC3A6 /* ErgoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ErgoTests-Info.plist"; sourceTree = "<group>"; };
 		0AA9877A1892B09E000AC3A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0AA987881892B2C1000AC3A6 /* AEErgoSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEErgoSpec.m; sourceTree = "<group>"; };
+		0AA9878A1892B63D000AC3A6 /* AEErgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEErgo.h; sourceTree = "<group>"; };
+		0AA9878B1892B63D000AC3A6 /* AEErgo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEErgo.m; sourceTree = "<group>"; };
 		0AEB0E5570F34C49BA575A39 /* libPods-ErgoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ErgoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BED22A2D64F340D0993CD996 /* Pods-ErgoTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ErgoTests.xcconfig"; path = "Pods/Pods-ErgoTests.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,6 +128,7 @@
 			children = (
 				0AA987611892B09E000AC3A6 /* AEAppDelegate.h */,
 				0AA987621892B09E000AC3A6 /* AEAppDelegate.m */,
+				0AA9878D1892B642000AC3A6 /* Main manager */,
 				0AA987641892B09E000AC3A6 /* MainMenu.xib */,
 				0AA9876A1892B09E000AC3A6 /* Images.xcassets */,
 				0AA987671892B09E000AC3A6 /* Ergo.xcdatamodeld */,
@@ -146,6 +152,7 @@
 		0AA987761892B09E000AC3A6 /* ErgoTests */ = {
 			isa = PBXGroup;
 			children = (
+				0AA987881892B2C1000AC3A6 /* AEErgoSpec.m */,
 				0AA987771892B09E000AC3A6 /* Supporting Files */,
 			);
 			path = ErgoTests;
@@ -158,6 +165,15 @@
 				0AA987791892B09E000AC3A6 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0AA9878D1892B642000AC3A6 /* Main manager */ = {
+			isa = PBXGroup;
+			children = (
+				0AA9878A1892B63D000AC3A6 /* AEErgo.h */,
+				0AA9878B1892B63D000AC3A6 /* AEErgo.m */,
+			);
+			name = "Main manager";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +312,7 @@
 			files = (
 				0AA987691892B09E000AC3A6 /* Ergo.xcdatamodeld in Sources */,
 				0AA987631892B09E000AC3A6 /* AEAppDelegate.m in Sources */,
+				0AA9878C1892B63D000AC3A6 /* AEErgo.m in Sources */,
 				0AA9875C1892B09E000AC3A6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AA987891892B2C1000AC3A6 /* AEErgoSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
