@@ -18,7 +18,7 @@
 		0AA987721892B09E000AC3A6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA987711892B09E000AC3A6 /* XCTest.framework */; };
 		0AA987731892B09E000AC3A6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA9874F1892B09D000AC3A6 /* Cocoa.framework */; };
 		0AA9877B1892B09E000AC3A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AA987791892B09E000AC3A6 /* InfoPlist.strings */; };
-		0AA9877D1892B09E000AC3A6 /* ErgoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA9877C1892B09E000AC3A6 /* ErgoTests.m */; };
+		9336A16A9FE340E9A729D77C /* libPods-ErgoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AEB0E5570F34C49BA575A39 /* libPods-ErgoTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +51,8 @@
 		0AA987711892B09E000AC3A6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		0AA987781892B09E000AC3A6 /* ErgoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ErgoTests-Info.plist"; sourceTree = "<group>"; };
 		0AA9877A1892B09E000AC3A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0AA9877C1892B09E000AC3A6 /* ErgoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ErgoTests.m; sourceTree = "<group>"; };
+		0AEB0E5570F34C49BA575A39 /* libPods-ErgoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ErgoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BED22A2D64F340D0993CD996 /* Pods-ErgoTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ErgoTests.xcconfig"; path = "Pods/Pods-ErgoTests.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +70,7 @@
 			files = (
 				0AA987731892B09E000AC3A6 /* Cocoa.framework in Frameworks */,
 				0AA987721892B09E000AC3A6 /* XCTest.framework in Frameworks */,
+				9336A16A9FE340E9A729D77C /* libPods-ErgoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +84,7 @@
 				0AA987761892B09E000AC3A6 /* ErgoTests */,
 				0AA9874E1892B09D000AC3A6 /* Frameworks */,
 				0AA9874D1892B09D000AC3A6 /* Products */,
+				BED22A2D64F340D0993CD996 /* Pods-ErgoTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +103,7 @@
 				0AA9874F1892B09D000AC3A6 /* Cocoa.framework */,
 				0AA987711892B09E000AC3A6 /* XCTest.framework */,
 				0AA987511892B09E000AC3A6 /* Other Frameworks */,
+				0AEB0E5570F34C49BA575A39 /* libPods-ErgoTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -142,7 +146,6 @@
 		0AA987761892B09E000AC3A6 /* ErgoTests */ = {
 			isa = PBXGroup;
 			children = (
-				0AA9877C1892B09E000AC3A6 /* ErgoTests.m */,
 				0AA987771892B09E000AC3A6 /* Supporting Files */,
 			);
 			path = ErgoTests;
@@ -181,9 +184,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AA987831892B09E000AC3A6 /* Build configuration list for PBXNativeTarget "ErgoTests" */;
 			buildPhases = (
+				46688891FEA247ABABD0AA2E /* Check Pods Manifest.lock */,
 				0AA9876C1892B09E000AC3A6 /* Sources */,
 				0AA9876D1892B09E000AC3A6 /* Frameworks */,
 				0AA9876E1892B09E000AC3A6 /* Resources */,
+				84A28182DDAE455FBF496312 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -251,6 +256,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		46688891FEA247ABABD0AA2E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		84A28182DDAE455FBF496312 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-ErgoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0AA987481892B09C000AC3A6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -266,7 +304,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AA9877D1892B09E000AC3A6 /* ErgoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +449,7 @@
 		};
 		0AA987841892B09E000AC3A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BED22A2D64F340D0993CD996 /* Pods-ErgoTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Ergo.app/Contents/MacOS/Ergo";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -434,6 +472,7 @@
 		};
 		0AA987851892B09E000AC3A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BED22A2D64F340D0993CD996 /* Pods-ErgoTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Ergo.app/Contents/MacOS/Ergo";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -469,6 +508,7 @@
 				0AA987821892B09E000AC3A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0AA987831892B09E000AC3A6 /* Build configuration list for PBXNativeTarget "ErgoTests" */ = {
 			isa = XCConfigurationList;
@@ -477,6 +517,7 @@
 				0AA987851892B09E000AC3A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
