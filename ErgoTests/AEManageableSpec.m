@@ -29,30 +29,34 @@ describe(@"Test AEManageable entity wrapper", ^{
 		
 	});
 	
-	it(@"titles should be empty after entity creation", ^{
-		[[[entity titles] should] beEmpty];
-	});
-	
-	it(@"should add titles properly", ^{
-		[[theValue([entity addTitle:@"Title 1"]) should] beYes];
-		[[theValue([entity addTitle:@"Title 2"]) should] beYes];
-		[[theValue([entity addTitle:@"Title 3"]) should] beYes];
+	context(@"titles", ^{
 		
-		[[[entity should] have:3] titles];
-	});
-	
-	it(@"should not add duplicated titles", ^{
-		[[theValue([entity addTitle:@"Title 2"]) should] beNo];
-		[[theValue([entity addTitle:@"Title 4"]) should] beYes];
-		[[theValue([entity addTitle:@"Title 1"]) should] beNo];
+		it(@"should be empty after entity creation", ^{
+			[[[entity titles] should] beEmpty];
+		});
 		
-		[[[entity should] have:4] titles];
-	});
-	
-	it(@"should delete titles properly", ^{
-		[[theValue([entity removeTitle:@"Title 3"]) should] beYes];
+		it(@"should add titles properly", ^{
+			[[theValue([entity addTitle:@"Title 1"]) should] beYes];
+			[[theValue([entity addTitle:@"Title 2"]) should] beYes];
+			[[theValue([entity addTitle:@"Title 3"]) should] beYes];
+			
+			[[[entity should] have:3] titles];
+		});
 		
-		[[[entity should] have:3] titles];
+		it(@"should not add duplicated titles", ^{
+			[[theValue([entity addTitle:@"Title 2"]) should] beNo];
+			[[theValue([entity addTitle:@"Title 4"]) should] beYes];
+			[[theValue([entity addTitle:@"Title 1"]) should] beNo];
+			
+			[[[entity should] have:4] titles];
+		});
+		
+		it(@"should delete titles properly", ^{
+			[[theValue([entity removeTitle:@"Title 3"]) should] beYes];
+			
+			[[[entity should] have:3] titles];
+		});
+		
 	});
 	
 });
