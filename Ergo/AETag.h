@@ -11,6 +11,17 @@
 #import "Tag.h"
 #import "NSManagedObject+Commons.h"
 
+typedef NS_ENUM(NSUInteger, AEErgoTagGroup) {
+	AEErgoTagGroupManageableType = 1,
+	
+	// manga
+	AEErgoTagGroupMangaSubtype = 2,
+	AEErgoTagGroupMangaTag = 3,
+	
+	// anime
+	AEErgoTagGroupAnimeSubtype = 4,
+	AEErgoTagGroupAnimeTag = 5
+};
 
 @interface AETag : Tag
 
