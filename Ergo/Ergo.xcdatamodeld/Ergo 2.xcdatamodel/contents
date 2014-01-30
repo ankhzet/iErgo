@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="12F45" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Manageable" representedClassName="AEManageable" syncable="YES">
+        <attribute name="annotation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="storage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 32" defaultValueString="0.0" syncable="YES"/>
         <attribute name="uid" optional="YES" attributeType="Integer 32" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tag" inverseName="manageables" inverseEntity="Tag" syncable="YES"/>
         <relationship name="titles" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ManageableTitle" inverseName="manageable" inverseEntity="ManageableTitle" syncable="YES"/>
     </entity>
     <entity name="ManageableTitle" representedClassName="AEManageableTitle" syncable="YES">
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="manageable" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Manageable" inverseName="titles" inverseEntity="Manageable" syncable="YES"/>
     </entity>
+    <entity name="Tag" representedClassName="AETag" syncable="YES">
+        <attribute name="descr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="group" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uid" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="manageables" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Manageable" inverseName="tags" inverseEntity="Manageable" syncable="YES"/>
+    </entity>
     <elements>
         <element name="Manageable" positionX="0" positionY="0" width="0" height="0"/>
         <element name="ManageableTitle" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Tag" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

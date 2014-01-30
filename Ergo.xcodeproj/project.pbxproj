@@ -29,6 +29,10 @@
 		0AA9877B1892B09E000AC3A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AA987791892B09E000AC3A6 /* InfoPlist.strings */; };
 		0AA987891892B2C1000AC3A6 /* AEErgoSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA987881892B2C1000AC3A6 /* AEErgoSpec.m */; };
 		0AA9878C1892B63D000AC3A6 /* AEErgo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA9878B1892B63D000AC3A6 /* AEErgo.m */; };
+		0AEFB7411893F9B7003857A1 /* AETagsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEFB7401893F9B7003857A1 /* AETagsManager.m */; };
+		0AEFB7441893F9DA003857A1 /* AETag.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEFB7431893F9DA003857A1 /* AETag.m */; };
+		0AEFB7471893FA3F003857A1 /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEFB7461893FA3F003857A1 /* Tag.m */; };
+		0AEFB74A189A7FF1003857A1 /* AETagsManagerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEFB749189A7FF1003857A1 /* AETagsManagerSpec.m */; };
 		9336A16A9FE340E9A729D77C /* libPods-ErgoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AEB0E5570F34C49BA575A39 /* libPods-ErgoTests.a */; };
 /* End PBXBuildFile section */
 
@@ -54,7 +58,7 @@
 		0A12F58E1892D61F00B701AD /* NSManagedObject+Commons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+Commons.m"; sourceTree = "<group>"; };
 		0A9F595F1892D86700DBD54D /* AEManageableTitleSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEManageableTitleSpec.m; sourceTree = "<group>"; };
 		0A9F59611892DC8B00DBD54D /* AEManageableSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEManageableSpec.m; sourceTree = "<group>"; };
-		0A9F59631892E07E00DBD54D /* Ergo 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ergo 2.xcdatamodel"; sourceTree = "<group>"; };
+		0A9F59631892E07E00DBD54D /* Ergo 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Ergo 2.xcdatamodel"; sourceTree = "<group>"; };
 		0A9F59671892E77F00DBD54D /* ManageableTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageableTitle.h; sourceTree = "<group>"; };
 		0A9F59681892E77F00DBD54D /* ManageableTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageableTitle.m; sourceTree = "<group>"; };
 		0A9F596A1892E7A200DBD54D /* AEManageableTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEManageableTitle.h; sourceTree = "<group>"; };
@@ -82,6 +86,13 @@
 		0AA9878A1892B63D000AC3A6 /* AEErgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEErgo.h; sourceTree = "<group>"; };
 		0AA9878B1892B63D000AC3A6 /* AEErgo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEErgo.m; sourceTree = "<group>"; };
 		0AEB0E5570F34C49BA575A39 /* libPods-ErgoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ErgoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AEFB73F1893F9B7003857A1 /* AETagsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AETagsManager.h; sourceTree = "<group>"; };
+		0AEFB7401893F9B7003857A1 /* AETagsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AETagsManager.m; sourceTree = "<group>"; };
+		0AEFB7421893F9DA003857A1 /* AETag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AETag.h; sourceTree = "<group>"; };
+		0AEFB7431893F9DA003857A1 /* AETag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AETag.m; sourceTree = "<group>"; };
+		0AEFB7451893FA3F003857A1 /* Tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tag.h; sourceTree = "<group>"; };
+		0AEFB7461893FA3F003857A1 /* Tag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tag.m; sourceTree = "<group>"; };
+		0AEFB749189A7FF1003857A1 /* AETagsManagerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AETagsManagerSpec.m; sourceTree = "<group>"; };
 		BED22A2D64F340D0993CD996 /* Pods-ErgoTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ErgoTests.xcconfig"; path = "Pods/Pods-ErgoTests.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +124,8 @@
 				0A12F58D1892D61F00B701AD /* NSManagedObject+Commons.h */,
 				0A12F58E1892D61F00B701AD /* NSManagedObject+Commons.m */,
 				0AA987671892B09E000AC3A6 /* Ergo.xcdatamodeld */,
+				0AEFB7451893FA3F003857A1 /* Tag.h */,
+				0AEFB7461893FA3F003857A1 /* Tag.m */,
 				0A9F59671892E77F00DBD54D /* ManageableTitle.h */,
 				0A9F59681892E77F00DBD54D /* ManageableTitle.m */,
 				0A12F5861892D37D00B701AD /* Manageable.h */,
@@ -194,6 +207,7 @@
 				0A12F56E1892C89700B701AD /* AEDataManagerSpec.m */,
 				0A9F595F1892D86700DBD54D /* AEManageableTitleSpec.m */,
 				0A9F59611892DC8B00DBD54D /* AEManageableSpec.m */,
+				0AEFB749189A7FF1003857A1 /* AETagsManagerSpec.m */,
 				0AA987881892B2C1000AC3A6 /* AEErgoSpec.m */,
 				0AA987771892B09E000AC3A6 /* Supporting Files */,
 			);
@@ -220,8 +234,20 @@
 				0A12F5811892D34600B701AD /* AEManageable.m */,
 				0A9F596A1892E7A200DBD54D /* AEManageableTitle.h */,
 				0A9F596B1892E7A200DBD54D /* AEManageableTitle.m */,
+				0AEFB7481893FA8D003857A1 /* Tags */,
 			);
 			name = "Main manager";
+			sourceTree = "<group>";
+		};
+		0AEFB7481893FA8D003857A1 /* Tags */ = {
+			isa = PBXGroup;
+			children = (
+				0AEFB73F1893F9B7003857A1 /* AETagsManager.h */,
+				0AEFB7401893F9B7003857A1 /* AETagsManager.m */,
+				0AEFB7421893F9DA003857A1 /* AETag.h */,
+				0AEFB7431893F9DA003857A1 /* AETag.m */,
+			);
+			name = Tags;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,10 +384,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AEFB7411893F9B7003857A1 /* AETagsManager.m in Sources */,
 				0A12F58F1892D61F00B701AD /* NSManagedObject+Commons.m in Sources */,
 				0AA987691892B09E000AC3A6 /* Ergo.xcdatamodeld in Sources */,
 				0A9F59691892E77F00DBD54D /* ManageableTitle.m in Sources */,
+				0AEFB7441893F9DA003857A1 /* AETag.m in Sources */,
 				0A12F56D1892C7E700B701AD /* AEDataManager.m in Sources */,
+				0AEFB7471893FA3F003857A1 /* Tag.m in Sources */,
 				0AA987631892B09E000AC3A6 /* AEAppDelegate.m in Sources */,
 				0A12F5881892D37D00B701AD /* Manageable.m in Sources */,
 				0AA9878C1892B63D000AC3A6 /* AEErgo.m in Sources */,
@@ -378,6 +407,7 @@
 				0A12F56F1892C89700B701AD /* AEDataManagerSpec.m in Sources */,
 				0A9F59601892D86700DBD54D /* AEManageableTitleSpec.m in Sources */,
 				0AA987891892B2C1000AC3A6 /* AEErgoSpec.m in Sources */,
+				0AEFB74A189A7FF1003857A1 /* AETagsManagerSpec.m in Sources */,
 				0A9F59621892DC8B00DBD54D /* AEManageableSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
