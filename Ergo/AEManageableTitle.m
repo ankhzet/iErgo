@@ -15,7 +15,7 @@
 }
 
 + (AEManageableTitle *) newTitle:(NSString *)title inContext:(NSManagedObjectContext *) context {
-	AEManageableTitle *entity = [NSEntityDescription insertNewObjectForEntityForName:[self entityName] inManagedObjectContext:context];
+	AEManageableTitle *entity = [self insertInManagedObjectContext:context];
 	
 	[entity setTitle:title];
 	return entity;

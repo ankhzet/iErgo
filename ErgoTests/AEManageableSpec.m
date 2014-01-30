@@ -59,6 +59,14 @@ describe(@"Test AEManageable entity wrapper", ^{
 		
 	});
 	
+	context(@"manageable type", ^{
+//		[entity setType:AEErgoManageableTypeManga];
+//		
+//		AEManageableType *interface = [entity getTypeInterface];
+//		NSArray *subtypes = [interface enumSubtypes];
+
+	});
+	
 });
 
 SPEC_END
