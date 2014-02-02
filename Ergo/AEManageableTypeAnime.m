@@ -14,8 +14,6 @@
 	if (!(self = [super init]))
 		return nil;
 	
-	self.type = AEErgoManageableTypeAnime;
-	
 	return self;
 }
 

@@ -9,6 +9,7 @@
 #import "AEManageableTypeManager.h"
 
 #import "AEManageableTypeManga.h"
+#import "AEManageableTypeMangaSeason.h"
 #import "AEManageableTypeAnime.h"
 
 @interface AEManageableTypeManager ()
@@ -19,12 +20,13 @@
 
 - (void) loadInterfaces {
 	[self addInterface:[AEManageableTypeManga new]];
+	[self addInterface:[AEManageableTypeMangaSeason new]];
 	[self addInterface:[AEManageableTypeAnime new]];
 }
 
 // returns interface object for specified manageable type
 + (AEManageableType *) interfaceForType: (AEErgoManageableType) type {
-	return [[self getInstance].interfaces objectForKey:@(type)];
+	return [[self getInstance].interfaces objectForKey:type];
 }
 
 - (id) init {
@@ -48,7 +50,7 @@
 }
 
 - (void) addInterface: (AEManageableType *) interface {
-	[self.interfaces setObject:interface forKey:@([interface type])];
+	[self.interfaces setObject:interface forKey:[[interface class] type]];
 }
 
 @end

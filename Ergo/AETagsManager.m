@@ -30,6 +30,7 @@
 	return self;
 }
 
+// singletone %)
 + (AETagsManager *) getInstance {
 	static AETagsManager *instance;
 	static dispatch_once_t onceToken;
@@ -39,16 +40,26 @@
 	return instance;
 }
 
+#pragma mark - Tag providers
+
 + (AETag *) getTagFromProviders: (NSUInteger) uid forGroup: (NSUInteger) group {
+	AETag *tag;
 	for (id provider in [self getInstance].tagProviders) {
-		AETag *tag;
     if ((tag = [provider tagForUID:uid andGroup:group]) != nil) {
 			return tag;
 		}
 	}
 	
-	return nil;
+	tag = [[self getInstance] tagForUID:uid andGroup:group];
+	NSAssert(tag, @"Unknown tag {@ID#%@, GROUP#%@}", @(uid), @(group));
+	return tag;
 }
+
++ (void) registerTagProvider: (id<AEErgoTagProvider>) provider {
+	[[[self getInstance] tagProviders] addObject:provider];
+}
+
+#pragma mark - Tag objects instantiation
 
 + (AETag *) newTag: (NSUInteger) uid forGroup: (NSUInteger) group withTitle: (NSString *) title andDescription: (NSString *) description {
 	AETag *tag = [AETag insertInManagedObjectContext:[self getInstance].context];
@@ -59,27 +70,62 @@
 	return tag;
 }
 
-+ (void) registerTagProvider: (id<AEErgoTagProvider>) provider {
-	[[[self getInstance] tagProviders] addObject:provider];
-}
-
-- (NSArray *) existingTagsForGroup: (NSUInteger) group {
-	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-	[fetchRequest setEntity:self.tagEntity];
-	
-	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"group = %d", group];
-	[fetchRequest setPredicate:predicate];
-	
-	NSError *error = nil;
-	
-	return [self.context executeFetchRequest:fetchRequest error:&error];
+// TODO: move predefined tags declaration into .plist
+- (AETag *) tagForUID: (NSUInteger) uid andGroup: (NSUInteger) group {
+	switch (group) {
+		case AEErgoTagGroupCommonTag:
+			switch (uid) {
+				// common tags
+				case AEErgoCommonTagManageableOngoing:
+					return [AETagsManager newTag:uid
+															forGroup:group
+														 withTitle:@"Ongoing"
+												andDescription:@"Not yet finished"];
+				case AEErgoCommonTagManageableIsSuspended:
+					return [AETagsManager newTag:uid
+															forGroup:group
+														 withTitle:@"Suspended"
+												andDescription:@"Production suspended"];
+				case AEErgoCommonTagViewed:
+					return [AETagsManager newTag:uid
+															forGroup:group
+														 withTitle:@"Viewed"
+												andDescription:@"Already viewed"];
+				case AEErgoCommonTagViewSuspended:
+					return [AETagsManager newTag:uid
+															forGroup:group
+														 withTitle:@"View suspended"
+												andDescription:@"View suspended"];
+					
+				// common jenres
+				case AEErgoJenreAction:
+					return [AETagsManager newTag:uid
+															forGroup:group
+														 withTitle:@"Action"
+												andDescription:@"Action"];
+				case AEErgoJenreAdventure:
+					return [AETagsManager newTag:uid
+															forGroup:group
+														 withTitle:@"Adventure"
+												andDescription:@"Adventure"];
+				case AEErgoJenreComedy:
+					return [AETagsManager newTag:uid
+															forGroup:group
+														 withTitle:@"Comedy"
+												andDescription:@"Comedy"];
+			}
+			
+			
+		default:;
+	}
+	return nil;
 }
 
 + (AETag *) tagFromUID: (NSUInteger) uid andGroup: (NSUInteger) group {
 	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
 	[fetchRequest setEntity:[self getInstance].tagEntity];
 	
-	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"uid = %d", uid];
+	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"uid = %d and group = %d", uid, group];
 	[fetchRequest setPredicate:predicate];
 	[fetchRequest setFetchLimit:1];
 	
@@ -94,9 +140,23 @@
 	return tag;
 }
 
-+ (BOOL) isTag: (NSUInteger) tag inSet: (NSSet *) tags {
+#pragma mark - Tag groups/sets
+
+- (NSArray *) existingTagsForGroup: (NSUInteger) group {
+	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+	[fetchRequest setEntity:self.tagEntity];
+	
+	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"group = %d", group];
+	[fetchRequest setPredicate:predicate];
+	
+	NSError *error = nil;
+	
+	return [self.context executeFetchRequest:fetchRequest error:&error];
+}
+
++ (BOOL) isTag: (NSUInteger) tag forGroup: (NSUInteger) group inSet: (NSSet *) tags {
 	for (AETag *t in tags) {
-    if ([t.uid integerValue] == tag) {
+    if (([t.uid integerValue] == tag) && ([t.group integerValue] == group)) {
 			return YES;
 		}
 	}

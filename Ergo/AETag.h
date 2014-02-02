@@ -13,14 +13,32 @@
 
 typedef NS_ENUM(NSUInteger, AEErgoTagGroup) {
 	AEErgoTagGroupManageableType = 1,
+	AEErgoTagGroupCommonTag = 2,
 	
 	// manga
-	AEErgoTagGroupMangaSubtype = 2,
-	AEErgoTagGroupMangaTag = 3,
+	AEErgoTagGroupMangaSubtype = 100,
+	// manga season
+	AEErgoTagGroupMangaSeasonSubtype = 101,
 	
 	// anime
-	AEErgoTagGroupAnimeSubtype = 4,
-	AEErgoTagGroupAnimeTag = 5
+	AEErgoTagGroupAnimeSubtype = 200
+};
+
+typedef NS_ENUM(NSUInteger, AEErgoCommonTag) {
+	// common flags
+	AEErgoCommonTagManageableOngoing = 1,
+	AEErgoCommonTagViewed = 2,
+	AEErgoCommonTagManageableIsSuspended = 3,
+	AEErgoCommonTagViewSuspended = 4,
+	
+	// manga tags
+	AEErgoMangaTagManga = 5,
+	
+	// jenres
+	AEErgoJenreAdventure = 10, // 10, not 6, give some space for common tags
+	AEErgoJenreAction = 11,
+	AEErgoJenreComedy = 12
+	// ... and over 9000 more
 };
 
 @interface AETag : Tag

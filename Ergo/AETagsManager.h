@@ -14,7 +14,7 @@
 - (AETag *) tagForUID: (NSUInteger) uid andGroup: (NSUInteger) group;
 @end
 
-@interface AETagsManager : NSObject
+@interface AETagsManager : NSObject <AEErgoTagProvider>
 
 + (void) registerTagProvider: (id<AEErgoTagProvider>) provider;
 
@@ -22,7 +22,7 @@
 
 + (AETag *) tagFromUID: (NSUInteger) uid andGroup: (NSUInteger) group;
 
-+ (BOOL) isTag: (NSUInteger) tag inSet: (NSSet *) tags;
++ (BOOL) isTag: (NSUInteger) tag forGroup: (NSUInteger) group inSet: (NSSet *) tags;
 + (NSSet *) plainTags: (NSSet *) tags;
 
 @end

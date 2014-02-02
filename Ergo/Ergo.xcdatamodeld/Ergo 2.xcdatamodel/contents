@@ -3,8 +3,10 @@
     <entity name="Manageable" representedClassName="AEManageable" syncable="YES">
         <attribute name="annotation" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="storage" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="type" optional="YES" attributeType="Integer 32" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="uid" optional="YES" attributeType="Integer 32" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="childs" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Manageable" inverseName="parent" inverseEntity="Manageable" syncable="YES"/>
+        <relationship name="parent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Manageable" inverseName="childs" inverseEntity="Manageable" syncable="YES"/>
         <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tag" inverseName="manageables" inverseEntity="Tag" syncable="YES"/>
         <relationship name="titles" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ManageableTitle" inverseName="manageable" inverseEntity="ManageableTitle" syncable="YES"/>
     </entity>

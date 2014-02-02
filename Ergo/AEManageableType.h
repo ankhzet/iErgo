@@ -10,15 +10,21 @@
 
 #import "AETagsManager.h"
 
-typedef NS_ENUM(NSUInteger, AEErgoManageableType) {
-	AEErgoManageableTypeManga = 1,
-	AEErgoManageableTypeAnime = 2
-};
+@class AEManageable;
+
+typedef NSString *AEErgoManageableType;
 
 @interface AEManageableType : NSObject <AEErgoTagProvider>
 
-@property (nonatomic) AEErgoManageableType type;
+// manageable type (manga, anime, book, etc)
++ (AEErgoManageableType) type;
+
+// manageable subtype (manga: oneshot, normal; anime: full-length, serial; book: story, antology)
 @property (strong) NSSet *subtypes;
+// manageable tags
 @property (strong) NSSet *subtags;
+
+- (NSMutableSet *) tags: (NSArray *) tags forGroup: (NSUInteger) group;
+- (BOOL) deleteManageable: (AEManageable *) manageable;
 
 @end

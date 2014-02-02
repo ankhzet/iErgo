@@ -9,26 +9,32 @@
 #import "Kiwi.h"
 
 #import "AEManageableTypeManager.h"
+#import "AEManageableTypeAnime.h"
+#import "AEManageableTypeManga.h"
 
 SPEC_BEGIN(AEManageableTypeManagerSpec)
 
 describe(@"Testing AEManageableTypeManager", ^{
-	__block AEManageableType *interface;
+	__block AEManageableType *interface1;
+	__block AEManageableType *interface2;
 	
 	it(@"should return proper interfaces for concrete types", ^{
-		interface = [AEManageableTypeManager interfaceForType:AEErgoManageableTypeAnime];
+		interface1 = [AEManageableTypeManager interfaceForType:[AEManageableTypeAnime type]];
+		interface2 = [AEManageableTypeManager interfaceForType:[AEManageableTypeManga type]];
 		
-		[interface shouldNotBeNil];
-		[[theValue([interface type]) should] equal:theValue(AEErgoManageableTypeAnime)];
+		[interface1 shouldNotBeNil];
+		[interface2 shouldNotBeNil];
 		
-		interface = [AEManageableTypeManager interfaceForType:AEErgoManageableTypeManga];
+		AEErgoManageableType type1 = [[interface1 class] type];
+		AEErgoManageableType type2 = [[interface2 class] type];
+
+		[[type1 should] equal:[AEManageableTypeAnime type]];
+		[[type2 should] equal:[AEManageableTypeManga type]];
+		[[type1 shouldNot] equal:type2];
 		
-		[interface shouldNotBeNil];
-		[[theValue([interface type]) shouldNot] equal:theValue(AEErgoManageableTypeAnime)];
+		interface1 = [AEManageableTypeManager interfaceForType:nil];
 		
-		interface = [AEManageableTypeManager interfaceForType:3];
-		
-		[interface shouldBeNil];
+		[interface1 shouldBeNil];
 	});
 });
 

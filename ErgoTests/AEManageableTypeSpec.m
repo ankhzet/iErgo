@@ -19,11 +19,11 @@ SPEC_BEGIN(AEManageableTypeSpec)
 describe(@"Testing AEManageableTypeManga", ^{
 	__block AEManageableType *interface;
 	
-	interface = [AEManageableTypeManager interfaceForType:AEErgoManageableTypeManga];
+	interface = [AEManageableTypeManager interfaceForType:[AEManageableTypeManga type]];
 	
 	it(@"should be returned by manager for key AEErgoManageableTypeManga", ^{
 		[interface shouldNotBeNil];
-		[[theValue([interface type]) should] equal:theValue(AEErgoManageableTypeManga)];
+		[[[[interface class] type] should] equal:[AEManageableTypeManga type]];
 		[[interface should] beKindOfClass:[AEManageableTypeManga class]];
 	});
 	
@@ -32,9 +32,15 @@ describe(@"Testing AEManageableTypeManga", ^{
 		[subtypes shouldNotBeNil];
 		[[subtypes should] haveCountOf:2];
 		
-		[[theValue([AETagsManager isTag: AEErgoMangaSubtypeNormal inSet:subtypes]) should] beYes];
-		[[theValue([AETagsManager isTag: AEErgoMangaSubtypeOneshot inSet:subtypes]) should] beYes];
-		[[theValue([AETagsManager isTag: 5 inSet:subtypes]) should] beNo];
+		[[theValue([AETagsManager isTag: AEErgoMangaSubtypeNormal
+															forGroup: AEErgoTagGroupMangaSubtype
+															inSet:subtypes]) should] beYes];
+		[[theValue([AETagsManager isTag: AEErgoMangaSubtypeOneshot
+															forGroup: AEErgoTagGroupMangaSubtype
+															inSet:subtypes]) should] beYes];
+		[[theValue([AETagsManager isTag: 5
+															forGroup: AEErgoTagGroupMangaSubtype
+															inSet:subtypes]) should] beNo];
 		
 		NSSet *typeTags = [AETagsManager plainTags:subtypes];
 		

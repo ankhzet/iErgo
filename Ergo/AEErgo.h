@@ -13,6 +13,5 @@
 @interface AEErgo : AEDataManager
 
 + (AEErgo *) getInstance;
-- (AEManageable *) newManageable;
 
 @end

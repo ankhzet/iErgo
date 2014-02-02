@@ -10,13 +10,15 @@
 		0A12F56D1892C7E700B701AD /* AEDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A12F56C1892C7E700B701AD /* AEDataManager.m */; };
 		0A12F56F1892C89700B701AD /* AEDataManagerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A12F56E1892C89700B701AD /* AEDataManagerSpec.m */; };
 		0A12F5821892D34600B701AD /* AEManageable.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A12F5811892D34600B701AD /* AEManageable.m */; };
-		0A12F5881892D37D00B701AD /* Manageable.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A12F5871892D37D00B701AD /* Manageable.m */; };
 		0A12F58F1892D61F00B701AD /* NSManagedObject+Commons.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A12F58E1892D61F00B701AD /* NSManagedObject+Commons.m */; };
 		0A495C271893C4EE00D8FFE8 /* AEManageableType.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A495C261893C4EE00D8FFE8 /* AEManageableType.m */; };
 		0A495C291893C61400D8FFE8 /* AEManageableTypeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A495C281893C61400D8FFE8 /* AEManageableTypeSpec.m */; };
+		0A984E46189D3DC600E82DDC /* ManageableTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A984E45189D3DC600E82DDC /* ManageableTitle.m */; };
+		0A984E4C189D3DC700E82DDC /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A984E4B189D3DC700E82DDC /* Tag.m */; };
+		0A984E4F189D3DFD00E82DDC /* Manageable.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A984E4E189D3DFD00E82DDC /* Manageable.m */; };
+		0A984E54189E9A1F00E82DDC /* AEManageableTypeMangaSeason.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A984E53189E9A1F00E82DDC /* AEManageableTypeMangaSeason.m */; };
 		0A9F59601892D86700DBD54D /* AEManageableTitleSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9F595F1892D86700DBD54D /* AEManageableTitleSpec.m */; };
 		0A9F59621892DC8B00DBD54D /* AEManageableSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9F59611892DC8B00DBD54D /* AEManageableSpec.m */; };
-		0A9F59691892E77F00DBD54D /* ManageableTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9F59681892E77F00DBD54D /* ManageableTitle.m */; };
 		0A9F596C1892E7A200DBD54D /* AEManageableTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9F596B1892E7A200DBD54D /* AEManageableTitle.m */; };
 		0AA987501892B09D000AC3A6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA9874F1892B09D000AC3A6 /* Cocoa.framework */; };
 		0AA9875A1892B09E000AC3A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AA987581892B09E000AC3A6 /* InfoPlist.strings */; };
@@ -37,7 +39,6 @@
 		0AEFB73D1893D5AD003857A1 /* AEManageableTypeAnime.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEFB73C1893D5AD003857A1 /* AEManageableTypeAnime.m */; };
 		0AEFB7411893F9B7003857A1 /* AETagsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEFB7401893F9B7003857A1 /* AETagsManager.m */; };
 		0AEFB7441893F9DA003857A1 /* AETag.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEFB7431893F9DA003857A1 /* AETag.m */; };
-		0AEFB7471893FA3F003857A1 /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEFB7461893FA3F003857A1 /* Tag.m */; };
 		0AEFB74A189A7FF1003857A1 /* AETagsManagerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEFB749189A7FF1003857A1 /* AETagsManagerSpec.m */; };
 		9336A16A9FE340E9A729D77C /* libPods-ErgoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AEB0E5570F34C49BA575A39 /* libPods-ErgoTests.a */; };
 /* End PBXBuildFile section */
@@ -58,18 +59,22 @@
 		0A12F56E1892C89700B701AD /* AEDataManagerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEDataManagerSpec.m; sourceTree = "<group>"; };
 		0A12F5801892D34600B701AD /* AEManageable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEManageable.h; sourceTree = "<group>"; };
 		0A12F5811892D34600B701AD /* AEManageable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEManageable.m; sourceTree = "<group>"; };
-		0A12F5861892D37D00B701AD /* Manageable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Manageable.h; sourceTree = "<group>"; };
-		0A12F5871892D37D00B701AD /* Manageable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Manageable.m; sourceTree = "<group>"; };
 		0A12F58D1892D61F00B701AD /* NSManagedObject+Commons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+Commons.h"; sourceTree = "<group>"; };
 		0A12F58E1892D61F00B701AD /* NSManagedObject+Commons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+Commons.m"; sourceTree = "<group>"; };
 		0A495C251893C4EE00D8FFE8 /* AEManageableType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEManageableType.h; sourceTree = "<group>"; };
 		0A495C261893C4EE00D8FFE8 /* AEManageableType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEManageableType.m; sourceTree = "<group>"; };
 		0A495C281893C61400D8FFE8 /* AEManageableTypeSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEManageableTypeSpec.m; sourceTree = "<group>"; };
+		0A984E44189D3DC600E82DDC /* ManageableTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageableTitle.h; sourceTree = "<group>"; };
+		0A984E45189D3DC600E82DDC /* ManageableTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageableTitle.m; sourceTree = "<group>"; };
+		0A984E4A189D3DC700E82DDC /* Tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tag.h; sourceTree = "<group>"; };
+		0A984E4B189D3DC700E82DDC /* Tag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tag.m; sourceTree = "<group>"; };
+		0A984E4D189D3DFD00E82DDC /* Manageable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Manageable.h; sourceTree = "<group>"; };
+		0A984E4E189D3DFD00E82DDC /* Manageable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Manageable.m; sourceTree = "<group>"; };
+		0A984E52189E9A1F00E82DDC /* AEManageableTypeMangaSeason.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEManageableTypeMangaSeason.h; sourceTree = "<group>"; };
+		0A984E53189E9A1F00E82DDC /* AEManageableTypeMangaSeason.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEManageableTypeMangaSeason.m; sourceTree = "<group>"; };
 		0A9F595F1892D86700DBD54D /* AEManageableTitleSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEManageableTitleSpec.m; sourceTree = "<group>"; };
 		0A9F59611892DC8B00DBD54D /* AEManageableSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEManageableSpec.m; sourceTree = "<group>"; };
 		0A9F59631892E07E00DBD54D /* Ergo 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Ergo 2.xcdatamodel"; sourceTree = "<group>"; };
-		0A9F59671892E77F00DBD54D /* ManageableTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageableTitle.h; sourceTree = "<group>"; };
-		0A9F59681892E77F00DBD54D /* ManageableTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageableTitle.m; sourceTree = "<group>"; };
 		0A9F596A1892E7A200DBD54D /* AEManageableTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEManageableTitle.h; sourceTree = "<group>"; };
 		0A9F596B1892E7A200DBD54D /* AEManageableTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEManageableTitle.m; sourceTree = "<group>"; };
 		0AA9874C1892B09D000AC3A6 /* Ergo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ergo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,8 +111,6 @@
 		0AEFB7401893F9B7003857A1 /* AETagsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AETagsManager.m; sourceTree = "<group>"; };
 		0AEFB7421893F9DA003857A1 /* AETag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AETag.h; sourceTree = "<group>"; };
 		0AEFB7431893F9DA003857A1 /* AETag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AETag.m; sourceTree = "<group>"; };
-		0AEFB7451893FA3F003857A1 /* Tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tag.h; sourceTree = "<group>"; };
-		0AEFB7461893FA3F003857A1 /* Tag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tag.m; sourceTree = "<group>"; };
 		0AEFB749189A7FF1003857A1 /* AETagsManagerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AETagsManagerSpec.m; sourceTree = "<group>"; };
 		BED22A2D64F340D0993CD996 /* Pods-ErgoTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ErgoTests.xcconfig"; path = "Pods/Pods-ErgoTests.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,14 +143,34 @@
 				0A12F58D1892D61F00B701AD /* NSManagedObject+Commons.h */,
 				0A12F58E1892D61F00B701AD /* NSManagedObject+Commons.m */,
 				0AA987671892B09E000AC3A6 /* Ergo.xcdatamodeld */,
-				0AEFB7451893FA3F003857A1 /* Tag.h */,
-				0AEFB7461893FA3F003857A1 /* Tag.m */,
-				0A9F59671892E77F00DBD54D /* ManageableTitle.h */,
-				0A9F59681892E77F00DBD54D /* ManageableTitle.m */,
-				0A12F5861892D37D00B701AD /* Manageable.h */,
-				0A12F5871892D37D00B701AD /* Manageable.m */,
+				0A984E4D189D3DFD00E82DDC /* Manageable.h */,
+				0A984E4E189D3DFD00E82DDC /* Manageable.m */,
+				0A984E4A189D3DC700E82DDC /* Tag.h */,
+				0A984E4B189D3DC700E82DDC /* Tag.m */,
+				0A984E44189D3DC600E82DDC /* ManageableTitle.h */,
+				0A984E45189D3DC600E82DDC /* ManageableTitle.m */,
 			);
 			name = "Data managing";
+			sourceTree = "<group>";
+		};
+		0A984E50189E99E600E82DDC /* Manga */ = {
+			isa = PBXGroup;
+			children = (
+				0AEFB7381893D215003857A1 /* AEManageableTypeManga.h */,
+				0AEFB7391893D215003857A1 /* AEManageableTypeManga.m */,
+				0A984E52189E9A1F00E82DDC /* AEManageableTypeMangaSeason.h */,
+				0A984E53189E9A1F00E82DDC /* AEManageableTypeMangaSeason.m */,
+			);
+			name = Manga;
+			sourceTree = "<group>";
+		};
+		0A984E51189E99F000E82DDC /* Anime */ = {
+			isa = PBXGroup;
+			children = (
+				0AEFB73B1893D5AD003857A1 /* AEManageableTypeAnime.h */,
+				0AEFB73C1893D5AD003857A1 /* AEManageableTypeAnime.m */,
+			);
+			name = Anime;
 			sourceTree = "<group>";
 		};
 		0AA987431892B09C000AC3A6 = {
@@ -265,10 +288,8 @@
 				0AEFB7341893CB0C003857A1 /* AEManageableTypeManager.m */,
 				0A495C251893C4EE00D8FFE8 /* AEManageableType.h */,
 				0A495C261893C4EE00D8FFE8 /* AEManageableType.m */,
-				0AEFB7381893D215003857A1 /* AEManageableTypeManga.h */,
-				0AEFB7391893D215003857A1 /* AEManageableTypeManga.m */,
-				0AEFB73B1893D5AD003857A1 /* AEManageableTypeAnime.h */,
-				0AEFB73C1893D5AD003857A1 /* AEManageableTypeAnime.m */,
+				0A984E50189E99E600E82DDC /* Manga */,
+				0A984E51189E99F000E82DDC /* Anime */,
 			);
 			name = "Manageable types";
 			sourceTree = "<group>";
@@ -419,18 +440,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AEFB7411893F9B7003857A1 /* AETagsManager.m in Sources */,
+				0A984E4F189D3DFD00E82DDC /* Manageable.m in Sources */,
+				0A984E54189E9A1F00E82DDC /* AEManageableTypeMangaSeason.m in Sources */,
 				0A12F58F1892D61F00B701AD /* NSManagedObject+Commons.m in Sources */,
 				0AA987691892B09E000AC3A6 /* Ergo.xcdatamodeld in Sources */,
-				0A9F59691892E77F00DBD54D /* ManageableTitle.m in Sources */,
 				0AEFB7441893F9DA003857A1 /* AETag.m in Sources */,
 				0A12F56D1892C7E700B701AD /* AEDataManager.m in Sources */,
 				0AEFB7351893CB0C003857A1 /* AEManageableTypeManager.m in Sources */,
-				0AEFB7471893FA3F003857A1 /* Tag.m in Sources */,
+				0A984E4C189D3DC700E82DDC /* Tag.m in Sources */,
 				0AA987631892B09E000AC3A6 /* AEAppDelegate.m in Sources */,
-				0A12F5881892D37D00B701AD /* Manageable.m in Sources */,
 				0AA9878C1892B63D000AC3A6 /* AEErgo.m in Sources */,
 				0A495C271893C4EE00D8FFE8 /* AEManageableType.m in Sources */,
 				0AEFB73A1893D215003857A1 /* AEManageableTypeManga.m in Sources */,
+				0A984E46189D3DC600E82DDC /* ManageableTitle.m in Sources */,
 				0A9F596C1892E7A200DBD54D /* AEManageableTitle.m in Sources */,
 				0AEFB73D1893D5AD003857A1 /* AEManageableTypeAnime.m in Sources */,
 				0AA9875C1892B09E000AC3A6 /* main.m in Sources */,

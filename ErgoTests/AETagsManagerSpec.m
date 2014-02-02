@@ -23,15 +23,17 @@ describe(@"Test AETagsManager", ^{
 		
 		tag = [AETag mock];
 		[[tag should] receive:@selector(uid) andReturn:@(1) withCountAtLeast:1];
+		[[tag should] receive:@selector(group) andReturn:@(2) withCountAtLeast:1];
 		[tags addObject:tag];
 
 		tag = [AETag mock];
 		[[tag should] receive:@selector(uid) andReturn:@(5) withCountAtLeast:1];
+		[[tag should] receive:@selector(group) andReturn:@(6) withCountAtLeast:1];
 		[tags addObject:tag];
 
-		[[theValue([AETagsManager isTag:1 inSet:tags]) should] beYes];
-		[[theValue([AETagsManager isTag:2 inSet:tags]) should] beNo];
-		[[theValue([AETagsManager isTag:5 inSet:tags]) should] beYes];
+		[[theValue([AETagsManager isTag:1 forGroup:2 inSet:tags]) should] beYes];
+		[[theValue([AETagsManager isTag:2 forGroup:2 inSet:tags]) should] beNo];
+		[[theValue([AETagsManager isTag:5 forGroup:6 inSet:tags]) should] beYes];
 	});
 	
 	it(@"should generate plain tag sets", ^{

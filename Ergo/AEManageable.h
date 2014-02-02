@@ -10,11 +10,19 @@
 #import "Manageable.h"
 
 #import "NSManagedObject+Commons.h"
+#import "AEManageableType.h"
 
 @interface AEManageable : Manageable
 
+@property (nonatomic, strong) AEManageableType *manageableType;
+
++ (AEManageable *) newManageable: (AEErgoManageableType) type forParent: (AEManageable *) parent;
+
 - (BOOL) addTitle:(NSString *) title;
 - (BOOL) removeTitle:(NSString *) title;
+
+- (void) addTag:(AETag *)tag;
+- (void) removeTag:(AETag *)tag;
 
 - (NSMutableSet *) mutableTitles;
 

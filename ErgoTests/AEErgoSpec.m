@@ -9,7 +9,7 @@ describe(@"Testing Ergo", ^{
 	context(@"singleton", ^{
 		
 		__block AEErgo *ergo;
-		__block AEManageable *entity;
+//		__block AEManageable *entity;
 		
 		it(@"AEErgo ::getInstance", ^{
 			// make sure, singleton returns instance
@@ -20,11 +20,6 @@ describe(@"Testing Ergo", ^{
 			
 			// make sure, it's AEErgo instance
 			[[ergo should] beKindOfClass:[AEErgo class]];
-		});
-		
-		it(@"should create new manageable entities on request", ^{
-			// new entity should be returned
-			[(entity = [ergo newManageable]) shouldNotBeNil];
 		});
 		
 	});

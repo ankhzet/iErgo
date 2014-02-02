@@ -14,15 +14,12 @@
 	if (!(self = [super init]))
 		return nil;
 	
-	self.type = AEErgoManageableTypeManga;
+	self.subtypes = [self tags:@[@(AEErgoMangaSubtypeNormal), @(AEErgoMangaSubtypeOneshot)]
+										forGroup:AEErgoTagGroupMangaSubtype];
 	
-	NSMutableSet *tags = [NSMutableSet set];
-	
-	for (NSNumber *tag in @[@(AEErgoMangaSubtypeNormal), @(AEErgoMangaSubtypeOneshot)])
-    [tags addObject:[AETagsManager tagFromUID:[tag integerValue]
-																		 andGroup:AEErgoTagGroupMangaSubtype]];
-	
-	self.subtypes = tags;
+//	self.subtags = [self tags:@[@(AEErgoMangaSubtypeNormal), @(AEErgoMangaSubtypeOneshot)]
+//									 forGroup:AEErgoTagGroupCommonTag];
+
 	
 	return self;
 }
@@ -32,13 +29,17 @@
 		case AEErgoTagGroupMangaSubtype:
 			switch (uid) {
 				case AEErgoMangaSubtypeNormal:
-					return [AETagsManager newTag:uid forGroup:group withTitle:@"Normal" andDescription:@"Manga with more than one chapters"];
+					return [AETagsManager newTag:uid
+															forGroup:group
+														 withTitle:@"Normal"
+												andDescription:@"Manga with more than one chapters"];
+					
 				case AEErgoMangaSubtypeOneshot:
-					return [AETagsManager newTag:uid forGroup:group withTitle:@"Oneshot" andDescription:@"Manga with only one chapter"];
+					return [AETagsManager newTag:uid
+															forGroup:group
+														 withTitle:@"Oneshot"
+												andDescription:@"Manga with only one chapter"];
 			}
-
-			
-		default:;
 	}
 	return nil;
 }
